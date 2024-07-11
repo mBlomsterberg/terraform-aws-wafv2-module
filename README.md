@@ -11,7 +11,7 @@
   <h3 align="center">terraform-aws-wafv2-module</h3>
 
   <p align="center">
-    Template for structure, convention and guidelines for Hanayama repositories in Github.
+    Terraform Module for AWS WAFv2 creation.
     <br />
     <br />
     <a href="https://github.com/mBlomsterberg/hanayama-repository-standard">Github Workflows</a>
@@ -24,14 +24,24 @@
 </div>
 
 <div align="center">
-<img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white"><img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"> <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" /> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"> <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"> <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"> <img src="https://img.shields.io/badge/drupal-%230678BE.svg?style=for-the-badge&logo=drupal&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"> <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e">
-
-[Missing a badge?](https://github.com/Ileriayo/markdown-badges)
+<img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white"><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
 </div>
 <br>
 
 # About
-This project description provides an overview for the reader to understand, and what function it has within Hanayama repositories. This repository creates a standard structure for development and collaboration between engineering teams. 
+This Terraform module creates an AWS WAFv2 WebACL with associated rules and conditions. 
+
+## Limitations
+1. Regional vs Global rules: This module only supports `regional` rules for now.
+2. Recursive rules are not supported by this module(`and_statement`, `not_statement` and `or_statement`).
+3. Statements not yet implemented: 
+    * `label_match_statement`
+    * `regex_match_statement`
+    * `size_constraint_statement`
+    * `sqli_match_statement`
+    * `xss_match_statement`
+    * `managed_rule_group_statement`
+    * `rule_group_reference_statement`
 
 
 # Contact 

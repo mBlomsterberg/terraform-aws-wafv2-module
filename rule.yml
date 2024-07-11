@@ -1,0 +1,53 @@
+
+
+
+statement {
+    label_match_statement "optional"
+        scope
+        key
+    managed_rule_group_statement "optional"
+        name
+        rule_action_override
+        managed_rule_group_configs
+            aws_managed_rules_bot_control_rule_set
+                inspection_level
+            aws_managed_rules_acfp_rule_set
+                creation_path
+                enable_regex_in_path
+                registration_page_path
+                request_inspection
+                response_inspection
+                login_path
+                password_field
+                payload_type
+                username_field
+            aws_managed_rules_atp_rule_set
+                enable_regex_in_path
+                login_path
+                request_inspection
+                response_inspection
+        scope_down_statement
+        vendor_name
+        version                
+    regex_match_statement "optional"
+        regex_string
+        field_to_match
+        text_transformation
+    regex_pattern_set_reference_statement "optional"
+        arn
+        field_to_match
+        text_transformation
+    rule_group_reference_statement "optional"
+        arn
+        rule_action_override
+    size_constraint_statement "optional"
+        comparison_operator
+        field_to_match
+        size
+        text_transformation
+    sqli_match_statement "optional"
+        field_to_match
+        text_transformation
+    xss_match_statement "optional"
+        field_to_match
+        text_transformation

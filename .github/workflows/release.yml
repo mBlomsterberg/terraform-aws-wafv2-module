@@ -20,11 +20,31 @@ on:
 permissions: read-all
 
 jobs:
-  pipeline:
+  release:
     permissions:
       actions: write 
       contents: write
     uses: mBlomsterberg/hanayama-workflows/.github/workflows/reusable_release.yml@main
     secrets: 
-      github-token: ${{secrets.PAT}}
+      github-token: ${{ secrets.PAT }}
+
+  docs:
+    needs: [release]
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write 
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Render terraform docs and push changes back to PR
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: .
+          output-file: README.md
+          output-method: inject
+          git-push: "true"
           
