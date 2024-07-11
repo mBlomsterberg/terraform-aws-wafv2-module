@@ -1,3 +1,4 @@
+
 <br />
 <div id="readme-top" align="center">
   <a href="https://github.com/mBlomsterberg/">
@@ -7,7 +8,7 @@
     </picture>
   </a>
 
-  <h3 align="center">hanayama-repository-standard</h3>
+  <h3 align="center">terraform-aws-wafv2-module</h3>
 
   <p align="center">
     Template for structure, convention and guidelines for Hanayama repositories in Github.
@@ -36,8 +37,6 @@ This project description provides an overview for the reader to understand, and 
 # Contact 
 **Github** [mBlomsterberg](https://github.com/mBlomsterberg) 
 
-**Linkedin** [Mikkel Blomsterberg](https://www.linkedin.com/in/mikkel-blomsterberg-663b785a/)
-
 # Repository overview
 | `File`                        | `description` |
 | ------------------            | ------------- |
@@ -61,9 +60,8 @@ This project has adopted the Hanayama Co. Code of Conduct. For more information 
 
 # License
 
-Copyright (c) Mikkel Blomsterberg All rights reserved.
+Copyright (c) mBlomsterberg All rights reserved.
 
 Licensed under the MIT license.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
